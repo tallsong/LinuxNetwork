@@ -10,7 +10,8 @@
             "type": "cppdbg",
             "request": "launch",
             //"program": "${fileDirname}/${fileBasenameNoExtension}",
-            "program": "${workspaceFolder}/main.out",
+            //"program": "${workspaceFolder}/main.out",
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}.out",
             "args": [
                 "123",
                 "fuck"
