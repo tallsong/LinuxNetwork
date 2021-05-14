@@ -7,7 +7,7 @@
 			"command": "/usr/bin/gcc",
 			"args": [
 				"-pedantic-errors", //disable compiler extensions
-				"-Werror", //Make all warnings into errors.
+				//"-Werror", //Make all warnings into errors.
 				"-Wall",
 				"-Wextra",
 				"-Wsign-conversion",
@@ -16,7 +16,8 @@
 				"${file}",
 				"-o",
 				//"${fileDirname}/${fileBasenameNoExtension}",
-				"${workspaceFolder}/main.out",
+				//"${workspaceFolder}/main.out",
+				"${workspaceFolder}/${fileBasenameNoExtension}.out",
 			],
 			"options": {
 				"cwd": "${workspaceFolder}"
