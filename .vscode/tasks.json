@@ -1,0 +1,56 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "C_single_standatd", //"label": "C/C++: g++ build active file",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-pedantic-errors", //disable compiler extensions
+				"-Werror", //Make all warnings into errors.
+				"-Wall",
+				"-Wextra",
+				"-Wsign-conversion",
+				//-Wall -Weffc++ -Wextra -Wsign-conversion Turn your warning levels up to the maximum
+				"-g", // for gdb to debug
+				"${file}",
+				"-o",
+				//"${fileDirname}/${fileBasenameNoExtension}",
+				"${workspaceFolder}/main.out",
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "C_single_pass", //"label": "C/C++: g++ build active file",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-g", // for gdb to debug
+				"${file}",
+				"-o",
+				//"${fileDirname}/${fileBasenameNoExtension}",
+				"${workspaceFolder}/${fileBasenameNoExtension}.out",
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+
+	]
+}

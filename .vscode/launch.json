@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    // for gdb in docker: docker run -itd -p 5223:22  --cap-add=SYS_PTRACE --security-opt seccomp=unconfined --name cpp ubuntu
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "single Build and debug active",
+            "type": "cppdbg",
+            "request": "launch",
+            //"program": "${fileDirname}/${fileBasenameNoExtension}",
+            "program": "${workspaceFolder}/main.out",
+            "args": [
+                "123",
+                "fuck"
+            ],
+            "stopAtEntry": false, //If set to true, the debugger should stop at the entry-point of the target (ignored on attach). 
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            //"preLaunchTask": "single file",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
