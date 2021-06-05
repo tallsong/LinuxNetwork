@@ -60,7 +60,10 @@
         "thread": "cpp",
         "regex": "cpp",
         "condition_variable": "cpp",
-        "shared_mutex": "cpp"
+        "shared_mutex": "cpp",
+        "unistd.h": "c",
+        "string.h": "c",
+        "inet.h": "c"
     },
     "C_Cpp.loggingLevel": "Debug",
     "C_Cpp.errorSquiggles": "Disabled"
